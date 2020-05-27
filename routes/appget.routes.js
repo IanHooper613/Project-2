@@ -1,5 +1,4 @@
-// *********************************************************************************
-// app.routes.js
+
 //
 // This module provides a set of routes for sending users the various
 // HTML pages for the frontend client app.
@@ -16,7 +15,6 @@ const router = require('express').Router()
 // The route for creating blob Items
 router.get('/grocery', function (req, res) {
   res.sendFile(path.join(__dirname, '../public/grocery.html'))
-  
 })
 
 // The route for viewing the product Items

@@ -21,7 +21,7 @@ router.get('/', function (req, res) {
   farmer.findAll({ include: [Item] })
     .then(farmersArray => res.status(200).json({ data: farmersArray }))
     .catch(err => {
-      console.log(`GET /Items failed \n`, err)
+      console.log('GET /Items failed \n', err)
       res.status(500).json({ errors: [err] })
     })
 })
@@ -34,7 +34,7 @@ router.get('/:id', function (req, res) {
   farmer.findByPk(req.params.id, { include: [Item] })
     .then(farmer => res.status(200).json({ data: farmer }))
     .catch(err => {
-      console.log(`GET /Items failed \n`, err)
+      console.log('GET /Items failed \n', err)
       res.status(500).json({ errors: [err] })
     })
 })
@@ -44,7 +44,7 @@ router.post('/', function (req, res) {
   farmer.create(req.body)
     .then(farmer => res.status(201).json({ data: farmer }))
     .catch(err => {
-      console.log(`GET /Items failed \n`, err)
+      console.log('GET /Items failed \n', err)
       res.status(500).json({ errors: [err] })
     })
 })
@@ -52,11 +52,12 @@ router.post('/', function (req, res) {
 // Delete the farmer with the id = req.params.id
 router.delete('/:id', async function (req, res) {
   try {
+    // eslint-disable-next-line no-use-before-define
     const farmer = await farmer.findByPk(req.params.id)
     await farmer.destroy()
     res.status(200).json({ data: farmer })
   } catch (err) {
-    console.log(`GET /Items failed \n`, err)
+    console.log('GET /Items failed \n', err)
     res.status(500).json({ errors: [err] })
   }
 })

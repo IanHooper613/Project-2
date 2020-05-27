@@ -18,8 +18,9 @@ const { Item, farmer } = require('../models')
 
 // GET route for getting all of the Items
 router.get('/', function (req, res) {
-  let filterCriteria = {}
+  const filterCriteria = {}
   if (req.query.farmer_id) {
+    // eslint-disable-next-line no-undef
     query.farmerId = req.query.farmer_id
   }
   // Add an `include` property in the options object of the `findAll` query.
@@ -28,7 +29,7 @@ router.get('/', function (req, res) {
   Item.findAll({ where: filterCriteria, include: [farmer] })
     .then(ItemsArray => res.status(200).json({ data: ItemsArray }))
     .catch(err => {
-      console.log(`GET /Items failed \n`, err)
+      console.log('GET /Items failed \n', err)
       res.status(500).json({ errors: [err] })
     })
 })
@@ -41,18 +42,18 @@ router.get('/:id', function (req, res) {
   Item.findByPk(req.params.id, { include: [farmer] })
     .then(Item => res.status(200).json({ data: Item }))
     .catch(err => {
-      console.log(`GET /Items failed \n`, err)
+      console.log('GET /Items failed \n', err)
       res.status(500).json({ errors: [err] })
     })
 })
 
 // Item route for saving a new Item
 router.Item('/', function (req, res) {
-  console.log(`New Item data received: \n`, req.body)
+  console.log('New Item data received: \n', req.body)
   Item.create(req.body)
     .then(Item => res.status(201).json({ data: Item }))
     .catch(err => {
-      console.log(`GET /Items failed \n`, err)
+      console.log('GET /Items failed \n', err)
       res.status(500).json({ errors: [err] })
     })
 })
@@ -60,11 +61,12 @@ router.Item('/', function (req, res) {
 // DELETE route for deleting Items
 router.delete('/:id', async function (req, res) {
   try {
+    // eslint-disable-next-line no-use-before-define
     const Item = await Item.findByPk(req.params.id)
     await Item.destroy()
     res.status(200).json({ data: Item })
   } catch (err) {
-    console.log(`GET /Items failed \n`, err)
+    console.log('GET /Items failed \n', err)
     res.status(500).json({ errors: [err] })
   }
 })
@@ -72,11 +74,12 @@ router.delete('/:id', async function (req, res) {
 // PUT route for updating Items
 router.put('/:id', async function (req, res) {
   try {
+    // eslint-disable-next-line no-use-before-define
     const Item = await Item.findByPk(req.params.id)
     await Item.update(req.body)
     res.status(200).json({ data: Item })
   } catch (err) {
-    console.log(`GET /Items failed \n`, err)
+    console.log('GET /Items failed \n', err)
     res.status(500).json({ errors: [err] })
   }
 })
