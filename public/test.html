@@ -1,0 +1,113 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Choose Your Craving</title>
+
+  
+    <!-- Material Design CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    
+    <!-- Google Fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Abel|Alice|Quicksand|Playfair+Display&amp;display=swap" rel="stylesheet">
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <!-- Local -->
+    <link rel="stylesheet" type="text/css" href="assets/style/style.css">
+
+</head>
+<body>
+
+    <header class="mdc-top-app-bar mdc-top-app-bar--fixed">
+        <div class="mdc-top-app-bar__row">
+
+          <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+            <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" onclick="window.location.href ='index.html';">home</button>
+            <span class="mdc-top-app-bar__title">Find Your Craving</span>
+          </section>
+
+          <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+            <!--Go to Saved Recipes-->
+            <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button tooltip" aria-label="Go to Saved Recipes" onclick="window.location.href='savedpages.html'" id="saved-recipes">
+                bookmarks
+                <span class="tooltiptext-left">Go to saved recipes</span>
+            </button>
+        </section>
+        </div>
+      </header>
+
+      <main class="mdc-elevation--z6 mdc-layout-grid mdc-top-app-bar--fixed-adjust">
+
+        <div id="restaurant-header" class="mdc-elevation--10">Find A Restaurant</div>
+
+        <ul class="mdc-layout-grid__inner mdc-image-list--with-text-protection my-image-list">
+
+            <li class="mdc-image-list__item mdc-layout-grid__cell--span-2" data-category="4bf58dd8d48988d14e941735">
+                <div class="mdc-image-list__image-aspect-container">
+                    <img class="mdc-image-list__image" src="assets/images/american.jpg">
+                </div>
+                <div class="mdc-image-list__supporting">
+                    <span class="mdc-image-list__label">American</span>
+                </div>
+            </li>
+
+            <li class="mdc-image-list__item mdc-layout-grid__cell--span-2" data-category="4bf58dd8d48988d145941735">
+                <div class="mdc-image-list__image-aspect-container">
+                    <img class="mdc-image-list__image" src="assets/images/chinese.jpg">
+                </div>
+                <div class="mdc-image-list__supporting">
+                    <span class="mdc-image-list__label">Chinese</span>
+                </div>
+            </li>
+
+            <li class="mdc-image-list__item mdc-layout-grid__cell--span-2" data-category="4bf58dd8d48988d10c941735">
+                <div class="mdc-image-list__image-aspect-container">
+                <img class="mdc-image-list__image" src="assets/images/french.jpg">
+                </div>
+                <div class="mdc-image-list__supporting">
+                <span class="mdc-image-list__label">French</span>
+                </div>
+            </li>
+
+            <li class="mdc-image-list__item mdc-layout-grid__cell--span-2" data-category="4bf58dd8d48988d10e941735">
+                <div class="mdc-image-list__image-aspect-container">
+                <img class="mdc-image-list__image" src="assets/images/greek.jpg">
+                </div>
+                <div class="mdc-image-list__supporting">
+                <span class="mdc-image-list__label">Greek</span>
+                </div>
+            </li>
+
+            <li class="mdc-image-list__item mdc-layout-grid__cell--span-2" data-category="4bf58dd8d48988d10f941735">
+                <div class="mdc-image-list__image-aspect-container">
+                <img class="mdc-image-list__image" src="assets/images/indian.jpg">
+                </div>
+                <div class="mdc-image-list__supporting">
+                <span class="mdc-image-list__label">Indian</span>
+                </div>
+            </li>
+
+            <li class="mdc-image-list__item mdc-layout-grid__cell--span-2" data-category="4bf58dd8d48988d110941735">
+                <div class="mdc-image-list__image-aspect-container">
+                <img class="mdc-image-list__image" src="assets/images/italian.jpg">
+                </div>
+                <div class="mdc-image-list__supporting">
+                <span class="mdc-image-list__label">Italian</span>
+                </div>
+            </li>
+
+    
+
+          
+
+
+        </ul>
+    </main>
+    <footer class="mdc-elevation--z6">crave it!</footer>
+    <script src="find-restaurant.js"></script>
+
+</body></html>

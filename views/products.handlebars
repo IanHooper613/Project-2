@@ -19,95 +19,58 @@
 <body><div id="skel-layers-wrapper" style="position: relative; left: 0px; right: 0px; top: 0px; backface-visibility: hidden; transition: -webkit-transform 0.25s ease-in-out 0s;">
 
     <!-- Wrapper -->
-        <div class="wrapper style1">
+    <div class="wrapper style1">
 
             <!-- Header -->
-                <div id="header" class="skel-panels-fixed">
-                    <div id="logo">
-                        <h1><a href="index.html">Local Farmer Grocery Shop</a></h1>
-                        <span class="tag"></span>
-                    </div>
-                    <nav id="nav">
-                        <ul>
-                            <li class="active" style="white-space: nowrap;"><a href="index.html">Homepage</a></li>
-                            <li style="white-space: nowrap;"><a href="login.html">Login</a></li>
-                            <li style="white-space: nowrap;"><a href="signup.html">Sign-up</a></li>
-                            <li style="white-space: nowrap;"><a href="https://github.com/ianhooper613/Project-2">Contact Us</a></li>
-                        </ul>
-                    </nav>
-                </div>
+        <div id="header" class="skel-panels-fixed">
+            <div id="logo">
+                <h1><a href="index.html">Local Farmer Grocery Shop</a></h1>
+                    <span class="tag"></span>
+            </div>
+
+            <nav id="nav">
+                <ul>
+                    <li class="active" style="white-space: nowrap;"><a href="index.html">Homepage</a></li>
+                        <li style="white-space: nowrap;"><a href="login.html">Login</a></li>
+                        <li style="white-space: nowrap;"><a href="signup.html">Sign-up</a></li>
+                        <li style="white-space: nowrap;"><a href="https://github.com/ianhooper613/Project-2">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
 
             <!-- Banner -->
-                <div id="banner" class="container">
-        <header class="major">
-          <h2>Products</h2>
-        </header>    
-                </div>
+        <div id="banner" class="container">
+            <header class="major">
+                <h2>Products</h2>
+            </header>    
+        </div>
+
 
             <!-- Extra -->
-                <div id="extra">
-        <div class="container">
-          <h2 style="color:white;font-size:30px;"> Fruits and Vegetables</h2><br>
-            <div class="row no-collapse-1">
-             <section class="3u"> <a href="#" class="image featured"><img src="images/vegetable_celery.PNG" alt=""></a>
-              <div class="box">
-              <h2>Celery</h2>
-              <h3>3.60$</h3>
-              <a href="#" class="button" id="celery">Checkout</a> </div>
-              </section>
-              <section class="3u"> <a href="#" class="image featured"><img src="images/vegetable_zucchini.png" alt=""></a>
-              <div class="box">
-              <h2>Zucchini</h2>
-              <h3>4.00$</h3>
-              <a href="#" class="button" id="zucchini">Checkout</a> </div>
-              </section>
-              <section class="3u"> <a href="#" class="image featured"><img src="images/vegetable_tomato.png" alt=""></a>
-              <div class="box">
-              <h2>Tomatoes</h2>
-              <h3>2.00$</h3>
-              <a href="#" class="button" id="tomato">Checkout</a> </div>
-              </section>
-              <section class="3u"> <a href="#" class="image featured"><img src="images/vegetable_cabage.PNG" alt=""></a>
-              <div class="box">
-              <h2>Carrots</h2>
-              <h3>1.75$</h3>
-              <a href="#" class="button" id="carrot">Checkout</a> </div>
-              </section>
+            <div id="extra">
+                <div class="container">
+                    <h2 style="color:white;font-size:30px;"> Fruits and Vegetables</h2><br>
+                        <div class="row no-collapse-1">
+
+
+                    {{#each products}}
+
+                        
+                        <section class="3u"> <a href="#" class="image featured"><img src="images/{{this.picture}}" alt=""></a>
+                            <div class="box">
+                            <h2>{{this.name}}</h2>
+                            <h4>{{this.description}}</h4>
+                            <h3>{{this.price}}</h3>
+                            <a href="#" class="button" id="celery">Checkout</a> 
+                            </div>
+                        </section>
+           
+                    {{/each}}
+
+             
+                         </div>
+                </div>       
             </div>
-            <div class="row no-collapse-1">
-                <section class="3u"> <a href="#" class="image featured"><img src="images/vegetable_celery.PNG" alt=""></a>
-                 <div class="box">
-                 <h2>Celery</h2>
-                 <h3>3.60$</h3>
-                 <a href="#" class="button" id="celery">Checkout</a> </div>
-                 </section>
-                 <section class="3u"> <a href="#" class="image featured"><img src="images/vegetable_zucchini.png" alt=""></a>
-                 <div class="box">
-                 <h2>Zucchini</h2>
-                 <h3>4.00$</h3>
-                 <a href="#" class="button" id="zucchini">Checkout</a> </div>
-                 </section>
-                 <section class="3u"> <a href="#" class="image featured"><img src="images/vegetable_tomato.png" alt=""></a>
-                 <div class="box">
-                 <h2>Tomatoes</h2>
-                 <h3>2.00$</h3>
-                 <a href="#" class="button" id="tomato">Checkout</a> </div>
-                 </section>
-                 <section class="3u"> <a href="#" class="image featured"><img src="images/vegetable_cabage.PNG" alt=""></a>
-                 <div class="box">
-                 <h2>Carrots</h2>
-                 <h3>1.75$</h3>
-                 <a href="#" class="button" id="carrot">Checkout</a> </div>
-                 </section>
-               </div>
-
-
-
-
-
-
-        </div>       
-     </div>
     </div>
 
 <!-- Footer -->
