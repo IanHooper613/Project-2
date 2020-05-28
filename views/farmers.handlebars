@@ -41,7 +41,7 @@
             <!-- Banner -->
         <div id="banner" class="container">
             <header class="major">
-                <h2>Products</h2>
+                <h2>List of Local Farmers</h2>
             </header>    
         </div>
 
@@ -49,20 +49,18 @@
             <!-- Extra -->
             <div id="extra">
                 <div class="container">
-                    <h2 style="color:white;font-size:30px;"> Fruits and Vegetables</h2><br>
+                    <h2 style="color:white;font-size:30px;"></h2><br>
                         <div class="row no-collapse-1">
 
 
-                    {{#each products}}
+                    {{#each farmers}}
 
 
-                        <section class="3u"> <a href="#" class="image featured"><img src="images/{{this.picture}}" alt=""></a>
+                        <section class="3u"> <a href="#" class="image featured"><img src="" alt=""></a>
                             <div class="box">
                             <h2>{{this.name}}</h2>
-                            <h2>{{this.Farmerid}}</h2>
-                            <h4>{{this.description}}</h4>
-                            <h3>{{this.price}}</h3>
-                            <a href="#" class="button">Checkout</a> 
+                            <h4>{{this.address}}</h4>
+                            <a href="/public/products.html" class="button">View Products</a> 
                             </div>
                         </section>
            

@@ -19,67 +19,47 @@
 <body><div id="skel-layers-wrapper" style="position: relative; left: 0px; right: 0px; top: 0px; backface-visibility: hidden; transition: -webkit-transform 0.25s ease-in-out 0s;">
 
     <!-- Wrapper -->
-    <div class="wrapper style1">
+        <div class="wrapper style1">
 
             <!-- Header -->
-        <div id="header" class="skel-panels-fixed">
-            <div id="logo">
-                <h1><a href="index.html">Local Farmer Grocery Shop</a></h1>
-                    <span class="tag"></span>
-            </div>
-
-            <nav id="nav">
-                <ul>
-                    <li class="active" style="white-space: nowrap;"><a href="index.html">Homepage</a></li>
-                        <li style="white-space: nowrap;"><a href="login.html">Login</a></li>
-                        <li style="white-space: nowrap;"><a href="signup.html">Sign-up</a></li>
-                        <li style="white-space: nowrap;"><a href="https://github.com/ianhooper613/Project-2">Contact Us</a></li>
-                </ul>
-            </nav>
-        </div>
+                <div id="header" class="skel-panels-fixed">
+                    <div id="logo">
+                        <h1><a href="index.html">Local Farmer Grocery Shop</a></h1>
+                        <span class="tag"></span>
+                    </div>
+                    <nav id="nav">
+                        <ul>
+                            <li class="active" style="white-space: nowrap;"><a href="index.html">Homepage</a></li>
+                            <li style="white-space: nowrap;"><a href="login.html">Login</a></li>
+                            <li style="white-space: nowrap;"><a href="signup.html">Sign-up</a></li>
+                            <li style="white-space: nowrap;"><a href="https://www.github.com/ianhooper613/Project-2">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                </div>
 
             <!-- Banner -->
-        <div id="banner" class="container">
-            <header class="major">
-                <h2>Products</h2>
-            </header>    
-        </div>
+               
+                <div id="banner" class="container">
+                    <h1 class="button medium">CHOOSE YOUR FARMER BELOW</h1>
+                    <section>
+                        <p href="#"><img src="images/banner.png" alt=""></p>
+                        <a href="farmer1.html" class="button medium">Local Farmer-1</a>
+                        <a href="farmer2.html" class="button medium">Local Farmer-2</a>
+                    </section>
+                </div>
 
+            
 
-            <!-- Extra -->
-            <div id="extra">
-                <div class="container">
-                    <h2 style="color:white;font-size:30px;"> Fruits and Vegetables</h2><br>
-                        <div class="row no-collapse-1">
+            <!-- Main -->
+</div>
 
-
-                    {{#each products}}
-
-
-                        <section class="3u"> <a href="#" class="image featured"><img src="images/{{this.picture}}" alt=""></a>
-                            <div class="box">
-                            <h2>{{this.name}}</h2>
-                            <h2>{{this.Farmerid}}</h2>
-                            <h4>{{this.description}}</h4>
-                            <h3>{{this.price}}</h3>
-                            <a href="#" class="button">Checkout</a> 
-                            </div>
-                        </section>
-           
-                    {{/each}}
-
-             
-                         </div>
-                </div>       
-            </div>
-    </div>
 <!-- Footer -->
 
 <!-- Copyright -->
     <div id="copyright">
         <div class="container">
             <div class="copyright">
-                <p>Licence MIT  - Local Farmer Grocery Shop</p>
+                <p>The Three Bald Guys Inc.</p>
                 <ul class="icons">
                     <li><a href="#" class="fa fa-facebook"><span>Facebook</span></a></li>
                     <li><a href="#" class="fa fa-twitter"><span>Twitter</span></a></li>
