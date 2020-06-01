@@ -1,4 +1,3 @@
-
 //
 // This module provides a set of routes for sending users the various
 // HTML pages for the frontend client app.
@@ -45,7 +44,7 @@ router.post('/api/productcreate', async function (req, res) {
   const productcreate = await db.Product.create()
   res.render('productcreate', { products: productcreate })
 })
-router.post('/posts', async function (req, res) {
+router.post('/productcreate', async function (req, res) {
   console.log('New post data received: \n', req.body)
   await db.Product.create(req.body)
     .then(post => res.status(201).json({ data: post }))
@@ -55,8 +54,8 @@ router.post('/posts', async function (req, res) {
     })
 })
 
-router.get('/posts', function (req, res) {
-  res.sendFile(path.join(__dirname, '../public/cms.html'))
+router.get('/productcreate', function (req, res) {
+  res.sendFile(path.join(__dirname, '../public/productcreate.html'))
 })
 
 // The index route redirects to /product route
